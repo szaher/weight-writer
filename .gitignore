@@ -1,0 +1,14 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+
+# Local caches and downloaded models
+.cache/
+model-qwen*/
+
+# Generated example models and reports
+examples/synthetic-models/
+examples/synthetic-real-models/
+weight-diff-report/

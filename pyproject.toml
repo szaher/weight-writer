@@ -1,0 +1,27 @@
+[project]
+name = "weight-writer"
+version = "0.1.0"
+description = "Inspect, compare, and visualize safetensors model weights"
+requires-python = ">=3.12"
+dependencies = [
+    "huggingface-hub>=2.4.0",
+]
+
+[project.optional-dependencies]
+chat = [
+    "accelerate>=1.0.0",
+    "pillow>=10.0.0",
+    "torch>=2.1.0",
+    "torchvision>=0.16.0",
+    "transformers>=4.57.0",
+]
+
+[project.scripts]
+weight-writer = "weight_writer.cli:main"
+
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
